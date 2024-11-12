@@ -36,7 +36,7 @@ export default async function Links(){
             <div className="grid grid-cols-4 p-4 w-full max-h-screen gap-x-5 gap-y-5">
                 {
                     links.map((link)=>{
-                        return <Link {...link}/>
+                        return <Link {...link} key={link.id}/>
                     })
                 }
             </div>
