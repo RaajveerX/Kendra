@@ -2,11 +2,9 @@ import LinkInput from "./LinkInput"
 import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import LinkDelete from "./LinkDelete";
-import { getLinks } from "@/api/linksapi";
-import { error } from "console";
 
 
-function Link({ tag,url,id }) {
+function LinkCard({ tag,url,id }) {
     return (
       <Card className="p-0 rounded-lg shadow-md border">
         <CardHeader>
@@ -38,7 +36,7 @@ export default async function Links(){
             <div className="grid grid-cols-4 p-4 w-full max-h-screen gap-x-5 gap-y-5">
                 {
                     links.map((link)=>{
-                        return <Link {...link} key={link.id}/>
+                        return <LinkCard {...link} key={link.id}/>
                     })
                 }
             </div>
