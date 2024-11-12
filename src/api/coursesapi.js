@@ -11,7 +11,7 @@ export async function getCourses(){
         return data;
 
     }catch(err){
-        console.log("Error fetching tasks:",error);
+        console.log("Error fetching courses:",error);
     }
 }
 
@@ -27,7 +27,7 @@ export async function postCourse(data){
         });
         
     } catch(error) {
-        console.error("Error posting task:", error);
+        console.error("Error posting course:", error);
     } finally {
         revalidatePath('/courses');
     }
@@ -44,7 +44,7 @@ export async function deleteCourse(id){
         });
 
     } catch(error) { 
-        console.error("Error deleting task:",error)
+        console.error("Error deleting course:",error)
     } finally {
         revalidatePath('/courses')
     }

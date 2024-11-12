@@ -12,7 +12,7 @@ export async function getLinks(){
         return data;
 
     }catch(err){
-        console.log("Error fetching tasks:",error)
+        console.log("Error fetching links:",error)
     }
 }
 
@@ -30,7 +30,7 @@ export async function postLink(data){
         });
         
     } catch(error) {
-        console.error("Error posting task:", error);
+        console.error("Error posting link:", error);
     } finally {
         revalidatePath('/links')
     }
@@ -47,7 +47,7 @@ export async function deleteLink(id){
         });
 
     } catch(error) { 
-        console.error("Error deleting task:",error)
+        console.error("Error deleting link:",error)
     } finally {
         revalidatePath('/links')
     }
