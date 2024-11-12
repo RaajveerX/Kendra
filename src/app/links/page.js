@@ -14,9 +14,9 @@ function LinkCard({ tag,url,id }) {
             </div>
         </CardHeader>
         <CardFooter className="pt-0">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-                <Button className="rounded-lg" variant="secondary">Go To Link</Button>
-            </a>
+            {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
+            <Button className="rounded-lg" variant="secondary">Go To Link</Button>
+            {/* </a> */}
         </CardFooter>
       </Card>
     );
