@@ -1,7 +1,7 @@
 'use server';
 import { revalidatePath } from "next/cache";
 
-const URL = process.env.COURSESURL
+const URL = process.env.COURSESURL;
 
 export async function getCourses(){
 
@@ -11,13 +11,11 @@ export async function getCourses(){
         return data;
 
     }catch(err){
-        console.log("Error fetching tasks:",error)
+        console.log("Error fetching tasks:",error);
     }
 }
 
 export async function postCourse(data){
-
-    console.log(data)
 
     try{
         await fetch(URL, {
@@ -31,7 +29,7 @@ export async function postCourse(data){
     } catch(error) {
         console.error("Error posting task:", error);
     } finally {
-        revalidatePath('/courses')
+        revalidatePath('/courses');
     }
 
 }

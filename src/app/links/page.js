@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import LinkDelete from "./LinkDelete";
 import { getLinks } from "@/api/linksapi";
+import { error } from "console";
 
 
 function Link({ tag,url,id }) {
@@ -27,7 +28,8 @@ function Link({ tag,url,id }) {
 
 export default async function Links(){
 
-    const links = await getLinks();
+    const data = await fetch(process.env.LINKSURL)
+    const links = await data.json()
 
 
     return (

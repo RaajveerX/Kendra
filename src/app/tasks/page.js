@@ -5,7 +5,6 @@ import TaskDelete from "./TaskDelete"
 
 function Task({name, due_date, duetime,id}){
 
-
     return (
         <div className="flex w-full p-3 border space-x-5 items-center rounded-2xl">
             <div className="flex-grow">
@@ -20,19 +19,17 @@ function Task({name, due_date, duetime,id}){
     )
 }
 
-
-
 export default async function Tasks(){
 
-    const tasks = await getTasks()
-    console.log(tasks)
-
+    const data = await fetch(process.env.TASKSURL)
+    const tasks = await data.json()
+    
     return (
         <div className="flex flex-col w-full p-5 gap-y-2" >
             <TaskInput/>
             <br/>
             {
-                tasks.map((task)=>{
+                tasks?.map((task)=>{
                     return <Task {...task} key={task.id}/>
                 })
             }

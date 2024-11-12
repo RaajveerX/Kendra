@@ -1,9 +1,7 @@
 import CourseInput from "./CourseInput";
-import { Card, CardHeader, CardContent, CardTitle, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardTitle, } from "@/components/ui/card";
 import CourseDelete from "./CourseDelete";
 import { getCourses } from "@/api/coursesapi";
-
-
 
 function Course({ name, section, instructor, room, time, id }) {
     return (
@@ -26,7 +24,8 @@ function Course({ name, section, instructor, room, time, id }) {
 
 export default async function Courses(){
 
-    const courses = await getCourses();
+    const data = await fetch(process.env.COURSESURL)
+    const courses = await data.json()
 
     return (
 
@@ -35,7 +34,7 @@ export default async function Courses(){
             <div className="flex w-full">
                 <div className="grid grid-cols-4 p-4 w-full max-h-screen gap-x-5 gap-y-5">
                     {
-                        courses.map((course)=>{
+                        courses?.map((course)=>{
                             return <Course {...course} key={course.id}/>
                         })
                     }
