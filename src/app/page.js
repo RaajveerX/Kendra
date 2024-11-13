@@ -1,4 +1,8 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils"; 
+import GitHub from "./(components)/GitHub";
+
+
 
 export default function HomePage() {
   return (
@@ -16,6 +20,9 @@ export default function HomePage() {
         <br/> <br/>
         AWS Lambda | AWS RDS (PostgreSQL)
       </h6>
+      <a href="https://github.com/RaajveerX/Kendra" target="_blank" rel="noopener noreferrer">
+        <Button  className="mt-8 rounded" variant="ghost"><GitHub/>Code for this App</Button>
+      </a>
     </div>
   );
 }
