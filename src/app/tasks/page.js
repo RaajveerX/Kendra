@@ -22,7 +22,7 @@ function Task({name, due_date, duetime,id}){
 export default async function Tasks(){
 
     const data = await fetch(process.env.TASKSURL)
-    const tasks = await data.json()
+    const tasks = await data.json();
     
     return (
         <div className="flex flex-col w-full p-5 gap-y-2" >

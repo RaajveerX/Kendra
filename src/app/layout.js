@@ -9,6 +9,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="h-screen">
+        <div className="mobile-warning">
+          This site is currently optimized for desktop. Please switch to a desktop view for the best experience.
+        </div>
         <div className="grid grid-rows-layout grid-cols-layout gap-4 h-full pl-4 pr-4 pb-4">
           {/* AppBar */}
           <div className="col-span-2">

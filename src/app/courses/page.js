@@ -1,7 +1,6 @@
 import CourseInput from "./CourseInput";
 import { Card, CardHeader, CardContent, CardTitle, } from "@/components/ui/card";
 import CourseDelete from "./CourseDelete";
-import { getCourses } from "@/api/coursesapi";
 
 function Course({ name, section, instructor, room, time, id }) {
     return (
@@ -25,7 +24,7 @@ function Course({ name, section, instructor, room, time, id }) {
 export default async function Courses(){
 
     const data = await fetch(process.env.COURSESURL)
-    const courses = await data.json()
+    const courses = await data.json();
 
     return (
 

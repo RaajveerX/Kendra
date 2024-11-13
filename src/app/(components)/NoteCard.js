@@ -9,7 +9,7 @@ const NoteCard = () => {
   const [note, setNote] = useState('');
 
   useEffect(() => {
-    const savedNote = localStorage.getItem('userNote');
+    const savedNote = localStorage.getItem('Note');
     if (savedNote) {
       setNote(savedNote);
     }
@@ -17,12 +17,12 @@ const NoteCard = () => {
 
   const handleNoteChange = (e) => {
     setNote(e.target.value);
-    localStorage.setItem('userNote', e.target.value);
+    localStorage.setItem('Note', e.target.value);
   };
 
-  const clearNote = () => {
+  const clear = () => {
     setNote('');
-    localStorage.removeItem('userNote');
+    localStorage.removeItem('Note');
   };
 
   return (
@@ -39,7 +39,7 @@ const NoteCard = () => {
             rows={10}
             className="w-full p-2 border rounded-md"
           />
-            <Button variant="outlined" color="primary" onClick={clearNote}>
+            <Button variant="outlined" color="primary" onClick={clear}>
               Clear Note
             </Button>
         </div>

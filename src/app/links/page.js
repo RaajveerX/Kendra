@@ -14,9 +14,9 @@ function LinkCard({ tag,url,id }) {
             </div>
         </CardHeader>
         <CardFooter className="pt-0">
-            {/* <a href={url} target="_blank" rel="noopener noreferrer"> */}
-            <Button className="rounded-lg" variant="secondary">Go To Link</Button>
-            {/* </a> */}
+            <a href={url} target="_blank" rel="noopener noreferrer">
+                <Button className="rounded-lg" variant="secondary">Go To Link</Button>
+            </a>
         </CardFooter>
       </Card>
     );
@@ -27,7 +27,7 @@ function LinkCard({ tag,url,id }) {
 export default async function Links(){
 
     const data = await fetch(process.env.LINKSURL)
-    const links = await data.json()
+    const links = await data.json();
 
 
     return (
@@ -35,7 +35,7 @@ export default async function Links(){
             <LinkInput/>
             <div className="grid grid-cols-4 p-4 w-full max-h-screen gap-x-5 gap-y-5">
                 {
-                    links.map((link)=>{
+                    links?.map((link)=>{
                         return <LinkCard {...link} key={link.id}/>
                     })
                 }

@@ -43,8 +43,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-/* globals.css */
 @layer utilities {
   .grid-rows-layout {
     grid-template-rows: auto 1fr 1fr; /* AppBar, Calendar/Notes rows */
@@ -53,8 +51,25 @@ body {
     grid-template-columns: 1fr 4fr; /* Calendar and Notes columns */
   }
 }
-
-/* globals.css */
 .button, .card, .border, .input {
-  @apply rounded; /* Or use rounded-md, rounded-full as needed */
+  @apply rounded; 
+}
+
+.mobile-warning {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-warning {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(136, 29, 29, 0.991);
+    color: white;
+    padding: 16px;
+    text-align: center;
+    z-index: 1000;
+  }
 }
