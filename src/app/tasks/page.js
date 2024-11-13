@@ -1,5 +1,4 @@
 import TaskInput from "./TaskInput";
-import { getTasks } from "@/api/tasksapi";
 import moment from "moment"
 import TaskDelete from "./TaskDelete"
 

@@ -8,7 +8,6 @@ export default function NavBar() {
       <div className="text-lg font-semibold">
         Kendra
       </div>
-
       <div className="flex items-center space-x-4">
         <Link href="/tasks"><Button variant="ghost">Tasks</Button></Link>
         <Link href="courses"><Button variant="ghost">Courses</Button></Link>

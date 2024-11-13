@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 
 const NoteCard = () => {
+
   const [note, setNote] = useState('');
 
   useEffect(() => {
@@ -31,6 +32,7 @@ const NoteCard = () => {
         <h2 className="text-lg font-bold">Notes</h2>
       </CardHeader>
       <CardContent>
+        
         <div className="space-y-4">
           <Textarea
             value={note}

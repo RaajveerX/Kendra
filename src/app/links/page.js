@@ -23,12 +23,10 @@ function LinkCard({ tag,url,id }) {
 }
 
 
-
 export default async function Links(){
 
-    const data = await fetch(process.env.LINKSURL)
+    const data = await fetch(process.env.LINKSURL);
     const links = await data.json();
-
 
     return (
         <div className="flex flex-col w-full p-5 gap-y-2" >

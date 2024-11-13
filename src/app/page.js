@@ -7,8 +7,8 @@ export default function HomePage() {
         className={cn(
           "text-6xl font-thin bg-gradient-to-r from-white via-gray-400 to-gray-800",
           "bg-clip-text text-transparent tracking-wide"
-        )}
-      >
+        )}>
+
         KENDRA</h1>
         
       <h6 className="mt-8 font-thin white text-center max-w-xl">

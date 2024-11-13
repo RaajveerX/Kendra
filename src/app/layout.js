@@ -3,8 +3,6 @@ import NavBar from "./(components)/NavBar";
 import { Calendar } from "@/components/ui/calendar"
 import NoteCard from "./(components)/NoteCard";
 
-
-// RootLayout.js
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
