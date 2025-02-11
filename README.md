@@ -1,4 +1,4 @@
-# Kendra - Web-App
+# Kendra Web-App
 A productivity tool created for students to organize tasks, courses, and frequently used websites for easy access!
 
 ## Technologies Used
