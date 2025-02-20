@@ -6,6 +6,9 @@ A productivity tool created for students to organize tasks, courses, and frequen
 - Back-end: Serverless event-driven using AWS Lambda
 - Database: AWS RDS PostgreSQL database, managed using PgAdmin
 
+## System Design
+![kendra drawio](https://github.com/user-attachments/assets/7ec1f136-6152-44e5-a3a7-9466292c2832)
+
 ## Live Link
 https://kendra-pi.vercel.app/
 
